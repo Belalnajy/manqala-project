@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #d1a784;
+  --color-secondary: #b8865a;
+}
+body {
+  font-family: 'Tajawal', sans-serif;
+}
