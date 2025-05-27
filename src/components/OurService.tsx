@@ -82,16 +82,16 @@ const OurService = () => {
   }
 
   const gardens = [
-        '../public/gardens1.png',
-        '../public/gardens2.png',
-        '../public/gardens1.png',
-        '../public/gardens2.png',
+        '/gardens1.png',
+        '/gardens2.png',
+        '/gardens1.png',
+        '/gardens2.png',
       ];
       const outsideimages = [
-        '../public/outside1.png',
-        '../public/outside2.png',
-        '../public/outside1.png',
-        '../public/outside2.png',
+        '/outside1.png',
+        '/outside2.png',
+        '/outside1.png',
+        '/outside2.png',
       ];
   return (
     <>

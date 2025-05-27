@@ -56,7 +56,7 @@ const Navbar = () => {
             </a>
           </div>
           <div className="text-white text-2xl font-bold tracking-widest">
-            <img src="../public/LOGO.png" alt="Logo" />
+            <img src="/LOGO.png" alt="Logo" />
           </div>
           {/* <!-- Mobile Menu Button --> */}
           <div className="md:hidden">

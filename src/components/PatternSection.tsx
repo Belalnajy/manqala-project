@@ -12,12 +12,12 @@ const PatternSection = () => {
           </h1>
         </div>
         <div className="grid xl:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-8 mx-5 xl:mx-20 md:mx-10">
-          <PatternCard src="../public/card1.png" label="تجاري" hoverLabel="تصميم تجاري" />
-          <PatternCard src="../public/card6.png" label="كلاسيك" hoverLabel="تصميم كلاسيكي" />
-          <PatternCard src="../public/card2.png" label="مودرن" hoverLabel="تصميم مودرن" />
-          <PatternCard src="../public/card5.png" label="مودرن" hoverLabel="تصميم عصري" />
-          <PatternCard src="../public/card4.png" label="مكاتب" hoverLabel="تصميم مكاتب" />
-          <PatternCard src="../public/card3.png" label="نجدي" hoverLabel="تصميم نجدي" />
+          <PatternCard src="/card1.png" label="تجاري" hoverLabel="تصميم تجاري" />
+          <PatternCard src="/card6.png" label="كلاسيك" hoverLabel="تصميم كلاسيكي" />
+          <PatternCard src="/card2.png" label="مودرن" hoverLabel="تصميم مودرن" />
+          <PatternCard src="/card5.png" label="مودرن" hoverLabel="تصميم عصري" />
+          <PatternCard src="/card4.png" label="مكاتب" hoverLabel="تصميم مكاتب" />
+          <PatternCard src="/card3.png" label="نجدي" hoverLabel="تصميم نجدي" />
         </div>
       </section>
     </>

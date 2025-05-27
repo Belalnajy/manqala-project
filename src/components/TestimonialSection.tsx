@@ -41,7 +41,7 @@ const TestimonialSection = () => {
                 <div className="testimonial-card border border-primary/30 rounded-lg p-12 h-[400px] flex flex-col">
                   <div className="flex flex-col items-center mb-4">
                     <img
-                      src="../public/customers/3.png"
+                      src="/customers/3.png"
                       alt="فهد العتيبي"
                       className="w-24 h-24 rounded-full object-cover mb-3"
                     />
@@ -66,7 +66,7 @@ const TestimonialSection = () => {
                 <div className="testimonial-card border border-primary/30 rounded-lg p-12 h-[400px] flex flex-col">
                   <div className="flex flex-col items-center mb-4">
                     <img
-                      src="../public/customers/2.png"
+                      src="/customers/2.png"
                       alt="نورة السبيعي"
                       className="w-24 h-24 rounded-full object-cover mb-3"
                     />
@@ -91,7 +91,7 @@ const TestimonialSection = () => {
                 <div className="testimonial-card border border-primary/30 rounded-lg p-12 h-[400px] flex flex-col">
                   <div className="flex flex-col items-center mb-4">
                     <img
-                      src="../public/customers/3.png"
+                      src="/customers/3.png"
                       alt="عبدالله القحطاني"
                       className="w-24 h-24 rounded-full object-cover mb-3"
                     />
@@ -116,7 +116,7 @@ const TestimonialSection = () => {
                 <div className="testimonial-card border border-primary/30 rounded-lg p-12 h-[400px] flex flex-col">
                   <div className="flex flex-col items-center mb-4">
                     <img
-                      src="../public/customers/4.png"
+                      src="/customers/4.png"
                       alt="سارة الدوسري"
                       className="w-24 h-24 rounded-full object-cover mb-3"
                     />

@@ -35,12 +35,12 @@ const Projects = () => {
   }
 
   const images = [
-        '../public/newprojects1.png',
-        '../public/newprojects2.png',
-        '../public/newprojects3.png',
-        '../public/newprojects1.png',
-        '../public/newprojects2.png',
-        '../public/newprojects3.png',
+        '/newprojects1.png',
+        '/newprojects2.png',
+        '/newprojects3.png',
+        '/newprojects1.png',
+        '/newprojects2.png',
+        '/newprojects3.png',
       ];
   return (
     <>

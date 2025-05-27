@@ -5,7 +5,7 @@ const ContactUs = () => {
           <section id="contact" className="contact-section py-25">
         <form className="bg-[#49494980] rounded-lg h-[500px] w-[90%] md:w-[50%] lg:w-50%] xl:w-[30%] p-8 backdrop-blur-xs mx-auto ">
           <div className="flex flex-col justify-center items-center ">
-            <img className="w-32 " src="../public/LOGO.png" alt="" />
+            <img className="w-32 " src="/LOGO.png" alt="" />
             <h1 className="text-xl mt-2 text-white font-medium">يسعدنا تواصلكم معنا</h1>
           </div>
           <div className="flex flex-row gap-4 justify-center items-center mt-4">

@@ -3,16 +3,16 @@ import { useState, useEffect } from 'react';
 
 const HeroSection = () => {
   const backgroundImages = [
-    '../../public/hero-section/1.png',
-    '../../public/hero-section/2.png',
-    '../../public/hero-section/3.png',
-    '../../public/hero-section/4.png',
-    '../../public/hero-section/5.png',
-    '../../public/hero-section/6.png',
-    '../../public/hero-section/7.png',
-    '../../public/hero-section/8.png',
-    '../../public/hero-section/9.png',
-    '../../public/hero-section/10.png',
+    '..//hero-section/1.png',
+    '..//hero-section/2.png',
+    '..//hero-section/3.png',
+    '..//hero-section/4.png',
+    '..//hero-section/5.png',
+    '..//hero-section/6.png',
+    '..//hero-section/7.png',
+    '..//hero-section/8.png',
+    '..//hero-section/9.png',
+    '..//hero-section/10.png',
   ]
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

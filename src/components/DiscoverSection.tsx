@@ -129,43 +129,43 @@ const DiscoverSection = () => {
         >
           <motion.img 
             className="w-full h-full rounded-lg shadow-lg" 
-            src="../public/discover-section/1.png" 
+            src="/discover-section/1.png" 
             alt="Luxury design" 
             variants={imageVariants[0]}
           />
           <motion.img 
             className="w-full h-full row-span-2 rounded-lg shadow-lg" 
-            src="../public/discover-section/3.png" 
+            src="/discover-section/3.png" 
             alt="Luxury design" 
             variants={imageVariants[1]}
           />
           <motion.img 
             className="w-full h-full row-span-2 rounded-lg shadow-lg" 
-            src="../public/discover-section/2.png" 
+            src="/discover-section/2.png" 
             alt="Luxury design" 
             variants={imageVariants[2]}
           />
           <motion.img 
             className="w-full h-full rounded-lg shadow-lg" 
-            src="../public/discover-section/4.png" 
+            src="/discover-section/4.png" 
             alt="Luxury design" 
             variants={imageVariants[3]}
           />
           <motion.img 
             className="w-full h-[300px] rounded-lg shadow-lg" 
-            src="../public/discover-section/5.png" 
+            src="/discover-section/5.png" 
             alt="Luxury design" 
             variants={imageVariants[4]}
           />
           <motion.img 
             className="w-full h-[300px] rounded-lg shadow-lg" 
-            src="../public/discover-section/6.png" 
+            src="/discover-section/6.png" 
             alt="Luxury design" 
             variants={imageVariants[5]}
           />
           <motion.img 
             className="w-full h-[300px] rounded-lg shadow-lg" 
-            src="../public/discover-section/7.png" 
+            src="/discover-section/7.png" 
             alt="Luxury design" 
             variants={imageVariants[6]}
           />

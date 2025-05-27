@@ -36,15 +36,15 @@ const SliderSection = () => {
 
   const slides = [
     {
-      image: '../public/IMG_E0767.png',
+      image: '/IMG_E0767.png',
       title: 'غرفة معيشة مودرن',
     },
     {
-      image: '../public/IMG_E0758.png',
+      image: '/IMG_E0758.png',
       title: 'مجلس شرقي',
     },
     {
-      image: '../public/IMG_E0882.png',
+      image: '/IMG_E0882.png',
       title: 'صالون رجالي',
     },
   ];

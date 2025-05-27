@@ -165,7 +165,7 @@ const Footer = () => {
               className={`flex flex-col justify-center items-end md:items-center ms-20 transform transition-all duration-700 delay-400 ${logoInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
               <div className="flex justify-end items-center">
                 <div className="text-center flex flex-col justify-center items-end md:justify-end md:items-center">
-                  <img className="w-[200px] mb-6 hover:scale-105 transition-transform duration-300" src="../../public/footer/LOGO.png" alt="Manqala Logo" />
+                  <img className="w-[200px] mb-6 hover:scale-105 transition-transform duration-300" src="..//footer/LOGO.png" alt="Manqala Logo" />
                   <p className="text-sm text font-['Tajawal']">منقلة - علامة تجارية . إحدى مؤسسات زاكر</p>
                   <p className="text-sm font-['Tajawal']">بلدي التجارية</p>
                 </div>

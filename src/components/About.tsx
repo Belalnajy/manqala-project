@@ -32,7 +32,7 @@ const About = () => {
   return (
     <section id="about-us" className="about-us py-30 px-6">
       <div className="flex justify-center">
-        <img src="../public/manqla-about.png" alt="" />
+        <img src="/manqla-about.png" alt="" />
       </div>
       <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 text-center xl:ms-15 sm:ms-0 mt-96">
         {sections.map((item, i) => (
