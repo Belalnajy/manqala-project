@@ -205,7 +205,7 @@ const Footer = () => {
                   <img
                     className="w-[200px] mb-6 hover:scale-105 transition-transform duration-300"
                     src="..//footer/LOGO.png"
-                    alt="Manqala Logo"
+                    alt="Manqla Logo"
                   />
                   <p className="text-sm text font-['Tajawal']">
                     منقلة - علامة تجارية . إحدى مؤسسات زاكر

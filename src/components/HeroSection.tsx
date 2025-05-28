@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import ImageWithSEO from './ImageWithSEO';
 
 const HeroSection = () => {
   const backgroundImages = [
@@ -30,17 +31,24 @@ const HeroSection = () => {
   return (
     <section className="hero-bg relative min-h-screen flex items-center justify-center overflow-hidden">
       {backgroundImages.map((image, index) => (
-        <motion.img 
+        <motion.div 
           key={index}
-          className="absolute top-0 left-0 z-0 w-full h-full object-cover"
-          src={image}
-          alt="Background image"
+          className="absolute top-0 left-0 z-0 w-full h-full"
           initial={{ opacity: 0 }}
           animate={{ 
             opacity: index === currentImageIndex ? 1 : 0 
           }}
           transition={{ duration: 1.2 }}
-        />
+        >
+          <ImageWithSEO
+            className="w-full h-full object-cover"
+            src={image}
+            alt={`منقلة - صورة خلفية ${index + 1}`}
+            width={1920}
+            height={1080}
+            loading={index === 0 ? 'eager' : 'lazy'}
+          />
+        </motion.div>
       ))}
       <div className="gradient-overlay absolute inset-0"></div>
 

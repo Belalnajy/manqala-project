@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ImageWithSEO from './ImageWithSEO';
 
 interface FormData {
   firstName: string;
@@ -100,7 +101,14 @@ const ContactUs = () => {
           <input type="hidden" name="_subject" value="رسالة جديدة من نموذج الاتصال" />
           <input type="hidden" name="_template" value="table" />
           <div className="flex flex-col justify-center items-center">
-            <img className="w-32" src="/LOGO.png" alt="Logo" />
+            <ImageWithSEO
+              className="w-32"
+              src="/LOGO.png"
+              alt="منقلة - شعار الشركة"
+              width={128}
+              height={128}
+              loading="eager"
+            />
             <h1 className="text-xl mt-2 text-white font-medium">يسعدنا تواصلكم معنا</h1>
           </div>
           

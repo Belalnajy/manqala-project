@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import SectionSEO from './SectionSEO';
+import ImageWithSEO from './ImageWithSEO';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -31,8 +33,20 @@ const About = () => {
 
   return (
     <section id="about-us" className="about-us py-30 px-6">
+      <SectionSEO
+        id="about-us"
+        title="من نحن - منقلة"
+        description="نحن في منقلة نقدم خدمات تصميم داخلي، خارجي، وتصميم مناظر طبيعية (Landscape) بلمسة فنية عصرية."
+        keywords="تصميم داخلي, تصميم خارجي, تصميم مناظر طبيعية, منقلة"
+      />
       <div className="flex justify-center">
-        <img src="/manqla-about.png" alt="" />
+        <ImageWithSEO
+          src="/manqla-about.png"
+          alt="منقلة - صورة تعريفية عن الشركة"
+          width={800}
+          height={600}
+          className="max-w-full"
+        />
       </div>
       <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 text-center xl:ms-15 sm:ms-0 mt-20 md:mt-96">
         {sections.map((item, i) => (

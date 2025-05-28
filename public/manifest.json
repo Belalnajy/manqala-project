@@ -1,0 +1,23 @@
+{
+  "name": "منقلة - حلول هندسية مبتكرة",
+  "short_name": "منقلة",
+  "description": "شركة منقلة المتخصصة في تقديم حلول هندسية مبتكرة وتصاميم إبداعية",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/protractor.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/protractor.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "lang": "ar",
+  "dir": "rtl"
+}
