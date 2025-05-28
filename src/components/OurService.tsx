@@ -113,8 +113,8 @@ const OurService = () => {
               <motion.div className="text-center order-1 md:order-2" variants={textVariants}>
                 <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary">تنسيق حدائق</h2>
                 <br />
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                  نخلق مساحات خارجية تنبض بالهدوء والجمال، <br /> توتنسجم مع محيطها.
+                <p dir="ltr" className="text-base md:text-lg text-gray-300 leading-relaxed">
+                  نخلق مساحات خارجية تنبض بالهدوء والجمال <br /> تنسجم مع محيطها
                 </p>
               </motion.div>
 

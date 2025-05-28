@@ -9,33 +9,33 @@ const Footer = () => {
 
   // Generate WhatsApp URL with number and message
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-  
+
   // Scroll animation hooks for each section
   const [contactRef, contactInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-  
+
   const [servicesRef, servicesInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-  
+
   const [hoursRef, hoursInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-  
+
   const [logoRef, logoInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-  
+
   // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
@@ -46,34 +46,41 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
             {/* Column 1: Contact Information */}
-            <div 
+            <div
               ref={contactRef}
-              className={`text-right transform transition-all duration-700 ${contactInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h3 className="text-xl font-bold text-primary mb-4 font-['Tajawal'] tracking-wide">تواصل معنا</h3>
+              className={`text-right transform transition-all duration-700 ${contactInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            >
+              <h3 className="text-xl font-bold text-primary mb-4 font-['Tajawal'] tracking-wide">
+                تواصل معنا
+              </h3>
               <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-end gap-2">
-                  <p className="group-hover:text-primary transition-colors duration-300">الرياض، الملقا، برنسيس تاور</p>
+                  <p className="group-hover:text-primary transition-colors duration-300">
+                    الرياض، الملقا، برنسيس تاور
+                  </p>
                   <div className="bg-primary/20 p-2 rounded-full group-hover:bg-primary/40 transition-colors duration-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-primary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
+                    <a href="https://maps.app.goo.gl/rSKCh7L1QFq7C5hK6?g_st=com.google.maps.preview.copy">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-primary"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+                    </a>
                   </div>
                 </div>
 
@@ -118,65 +125,109 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center justify-end gap-2">
-                  <p className="group-hover:text-primary transition-colors duration-300">info@manqla.com</p>
+                  <p className="group-hover:text-primary transition-colors duration-300">
+                    info@manqla.com
+                  </p>
                   <div className="bg-primary/20 p-2 rounded-full group-hover:bg-primary/40 transition-colors duration-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-primary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
+                    <a href="mailto:info@manqla.com">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-primary"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Column 2: Services */}
-            <div 
+            <div
               ref={servicesRef}
-              className={`text-right transform transition-all duration-700 delay-200 ${servicesInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h3 className="text-2xl font-bold text-primary mb-4 font-['Tajawal'] tracking-wide">اعمال التصميم</h3>
+              className={`text-right transform transition-all duration-700 delay-200 ${servicesInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            >
+              <h3 className="text-2xl font-bold text-primary mb-4 font-['Tajawal'] tracking-wide">
+                اعمال التصميم
+              </h3>
               <div className="space-y-3 text-lg flex flex-col">
-                <a href="#our-service" className="hover:text-primary hover:translate-x-[-5px] transition-all duration-300 cursor-pointer">خدماتنا</a>
-                <a href="#about-us" className="hover:text-primary hover:translate-x-[-5px] transition-all duration-300 cursor-pointer">نبذة عنا</a>
-                <a href="#contact" className="hover:text-primary hover:translate-x-[-5px] transition-all duration-300 cursor-pointer">تواصل معنا</a>
+                <a
+                  href="#our-service"
+                  className="hover:text-primary hover:translate-x-[-5px] transition-all duration-300 cursor-pointer"
+                >
+                  خدماتنا
+                </a>
+                <a
+                  href="#about-us"
+                  className="hover:text-primary hover:translate-x-[-5px] transition-all duration-300 cursor-pointer"
+                >
+                  نبذة عنا
+                </a>
+                <a
+                  href="#contact"
+                  className="hover:text-primary hover:translate-x-[-5px] transition-all duration-300 cursor-pointer"
+                >
+                  تواصل معنا
+                </a>
               </div>
             </div>
 
             {/* Column 3: Working Hours and Logo */}
-            <div 
+            <div
               ref={hoursRef}
-              className={`text-right transform transition-all duration-700 delay-300 ${hoursInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h3 className="text-2xl font-bold text-primary mb-4 font-['Tajawal'] tracking-wide">:ساعات العمل</h3>
-              <p className="mb-2 text-lg hover:text-primary transition-colors duration-300">من الاحد الى الخميس</p>
-              <p className="mb-4 text-lg hover:text-primary transition-colors duration-300">9 صباحا - 4 مساءً</p>
+              className={`text-right transform transition-all duration-700 delay-300 ${hoursInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            >
+              <h3 className="text-2xl font-bold text-primary mb-4 font-['Tajawal'] tracking-wide">
+                :ساعات العمل
+              </h3>
+              <p className="mb-2 text-lg hover:text-primary transition-colors duration-300">
+                من الاحد الى الخميس
+              </p>
+              <p className="mb-4 text-lg hover:text-primary transition-colors duration-300">
+                9 صباحا - 4 مساءً
+              </p>
             </div>
 
-            <div 
+            <div
               ref={logoRef}
-              className={`flex flex-col justify-center items-end md:items-center ms-20 transform transition-all duration-700 delay-400 ${logoInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              className={`flex flex-col justify-center items-end md:items-center ms-20 transform transition-all duration-700 delay-400 ${logoInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            >
               <div className="flex justify-end items-center">
                 <div className="text-center flex flex-col justify-center items-end md:justify-end md:items-center">
-                  <img className="w-[200px] mb-6 hover:scale-105 transition-transform duration-300" src="..//footer/LOGO.png" alt="Manqala Logo" />
-                  <p className="text-sm text font-['Tajawal']">منقلة - علامة تجارية . إحدى مؤسسات زاكر</p>
+                  <img
+                    className="w-[200px] mb-6 hover:scale-105 transition-transform duration-300"
+                    src="..//footer/LOGO.png"
+                    alt="Manqala Logo"
+                  />
+                  <p className="text-sm text font-['Tajawal']">
+                    منقلة - علامة تجارية . إحدى مؤسسات زاكر
+                  </p>
                   <p className="text-sm font-['Tajawal']">بلدي التجارية</p>
                 </div>
               </div>
 
               <div className="flex justify-center space-x-4 mt-4">
-                <a href="#">
-                  <FontAwesomeIcon icon={faInstagram} size="2x" className="text-primary hover:text-primary/80 transition-all duration-300 hover:bg-primary/20 p-2 rounded-full" />
+                <a href="https://www.instagram.com/manqla_designs?igsh=ZGV6Z2JwM2toMDhp">
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    size="2x"
+                    className="text-primary hover:text-primary/80 transition-all duration-300 hover:bg-primary/20 p-2 rounded-full"
+                  />
                 </a>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faWhatsapp} size="2x" className="text-primary hover:text-primary/80 transition-all duration-300 hover:bg-primary/20 p-2 rounded-full" />
+                  <FontAwesomeIcon
+                    icon={faWhatsapp}
+                    size="2x"
+                    className="text-primary hover:text-primary/80 transition-all duration-300 hover:bg-primary/20 p-2 rounded-full"
+                  />
                 </a>
               </div>
             </div>
@@ -184,20 +235,31 @@ const Footer = () => {
 
           {/* Divider */}
           <div className="border-t-[1px] border-primary my-8"></div>
-          
+
           {/* Copyright Section */}
           <div className="text-center text-sm opacity-80 hover:opacity-100 transition-opacity duration-300">
             <p>© {new Date().getFullYear()} منقلة. جميع الحقوق محفوظة</p>
           </div>
-          
+
           {/* Scroll to top button */}
-          <button 
+          <button
             onClick={scrollToTop}
             className="absolute bottom-10 right-10 bg-primary/20 hover:bg-primary text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Scroll to top"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 15l7-7 7 7"
+              />
             </svg>
           </button>
         </div>

@@ -1,8 +1,7 @@
-
 const ContactUs = () => {
   return (
     <>
-          <section id="contact" className="contact-section py-25">
+      <section id="contact" className="contact-section py-25">
         <form className="bg-[#49494980] rounded-lg h-[500px] w-[90%] md:w-[50%] lg:w-50%] xl:w-[30%] p-8 backdrop-blur-xs mx-auto ">
           <div className="flex flex-col justify-center items-center ">
             <img className="w-32 " src="/LOGO.png" alt="" />
@@ -33,11 +32,13 @@ const ContactUs = () => {
               placeholder=" اترك لنا رساله "
             />
           </div>
-          <button className="bg-primary text-white px-6 py-2 rounded-lg mt-4 w-full">ارسال</button>
+          <button className="bg-primary text-white px-6 py-2 rounded-lg mt-4 w-full hover:cursor-pointer hover:bg-secondary">
+            ارسال
+          </button>
         </form>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;

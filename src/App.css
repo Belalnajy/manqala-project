@@ -21,15 +21,15 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .floating-animation {
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0px);
+    transform: scale(1.2);
   }
   50% {
-    transform: translateY(-20px);
+    transform: scale(1);
   }
 }
 .text-shadow {
