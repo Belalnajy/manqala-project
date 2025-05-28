@@ -44,15 +44,17 @@ const ContactUs = () => {
     setSubmitStatus({});
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      // FormSubmit will handle the email delivery
+      const formElement = e.target as HTMLFormElement;
+      const formData = new FormData(formElement);
+      
+      const response = await fetch(formElement.action, {
         method: 'POST',
+        body: formData,
         headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+          'Accept': 'application/json'
+        }
       });
-
-      const data = await response.json();
       
       if (response.ok) {
         setSubmitStatus({
@@ -67,6 +69,7 @@ const ContactUs = () => {
           message: ''
         });
       } else {
+        const data = await response.json();
         setSubmitStatus({
           success: false,
           message: data.message || 'فشل في إرسال الرسالة. يرجى المحاولة مرة أخرى.'
@@ -75,7 +78,7 @@ const ContactUs = () => {
     } catch (error) {
       setSubmitStatus({
         success: false,
-        message: 'حدث خطأ أثناء الاتصال بالخادم. يرجى المحاولة مرة أخرى.'
+        message: 'حدث خطأ أثناء إرسال النموذج. يرجى المحاولة مرة أخرى.'
       });
       console.error('Error submitting form:', error);
     } finally {
@@ -88,8 +91,14 @@ const ContactUs = () => {
       <section id="contact" className="contact-section py-25">
         <form 
           className="bg-[#49494980] rounded-lg min-h-[500px] w-[90%] md:w-[50%] lg:w-50%] xl:w-[30%] p-8 backdrop-blur-xs mx-auto"
+          action={`https://formsubmit.co/${import.meta.env.VITE_CONTACT_EMAIL}`} 
+          method="POST"
           onSubmit={handleSubmit}
         >
+          {/* FormSubmit configuration */}
+          <input type="hidden" name="_next" value={window.location.href} />
+          <input type="hidden" name="_subject" value="رسالة جديدة من نموذج الاتصال" />
+          <input type="hidden" name="_template" value="table" />
           <div className="flex flex-col justify-center items-center">
             <img className="w-32" src="/LOGO.png" alt="Logo" />
             <h1 className="text-xl mt-2 text-white font-medium">يسعدنا تواصلكم معنا</h1>
