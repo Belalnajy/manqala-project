@@ -4,6 +4,34 @@
   --color-primary: #d1a784;
   --color-secondary: #b8865a;
 }
+
+/* Apply Tajawal font to all elements */
+* {
+  font-family: 'Tajawal', sans-serif;
+}
+
 body {
   font-family: 'Tajawal', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-black {
+  font-weight: 900;
 }

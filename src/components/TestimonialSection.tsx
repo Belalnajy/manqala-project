@@ -1,4 +1,3 @@
-import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Autoplay } from "swiper/modules"
 import "swiper/css"
@@ -41,7 +40,7 @@ const TestimonialSection = () => {
                 <div className="testimonial-card border border-primary/30 rounded-lg p-12 h-[400px] flex flex-col">
                   <div className="flex flex-col items-center mb-4">
                     <img
-                      src="/customers/3.png"
+                      src="/profile.png"
                       alt="فهد العتيبي"
                       className="w-24 h-24 rounded-full object-cover mb-3"
                     />
@@ -66,7 +65,7 @@ const TestimonialSection = () => {
                 <div className="testimonial-card border border-primary/30 rounded-lg p-12 h-[400px] flex flex-col">
                   <div className="flex flex-col items-center mb-4">
                     <img
-                      src="/customers/2.png"
+                      src="/profile.png"
                       alt="نورة السبيعي"
                       className="w-24 h-24 rounded-full object-cover mb-3"
                     />
@@ -91,7 +90,7 @@ const TestimonialSection = () => {
                 <div className="testimonial-card border border-primary/30 rounded-lg p-12 h-[400px] flex flex-col">
                   <div className="flex flex-col items-center mb-4">
                     <img
-                      src="/customers/3.png"
+                      src="/profile.png"
                       alt="عبدالله القحطاني"
                       className="w-24 h-24 rounded-full object-cover mb-3"
                     />
@@ -101,7 +100,7 @@ const TestimonialSection = () => {
                       <span>★</span>
                       <span>★</span>
                       <span>★</span>
-                      <span>★</span>
+                      <span>☆</span>
                     </div>
                   </div>
                   <p className="text-white/80 text-center">
@@ -116,7 +115,7 @@ const TestimonialSection = () => {
                 <div className="testimonial-card border border-primary/30 rounded-lg p-12 h-[400px] flex flex-col">
                   <div className="flex flex-col items-center mb-4">
                     <img
-                      src="/customers/4.png"
+                      src="/profile.png"
                       alt="سارة الدوسري"
                       className="w-24 h-24 rounded-full object-cover mb-3"
                     />
@@ -126,7 +125,7 @@ const TestimonialSection = () => {
                       <span>★</span>
                       <span>★</span>
                       <span>★</span>
-                      <span>★</span>
+                      <span>☆</span>
                     </div>
                   </div>
                   <p className="text-white/80 text-center">

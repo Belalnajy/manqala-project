@@ -1,0 +1,56 @@
+/* Tajawal Font Implementation */
+
+/* Import Tajawal font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+/* Apply Tajawal font to all elements */
+:root {
+  --font-family-base: 'Tajawal', sans-serif;
+}
+
+* {
+  font-family: var(--font-family-base);
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+}
+
+/* Font weight utility classes */
+.font-tajawal {
+  font-family: var(--font-family-base) !important;
+}
+
+.font-thin {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}

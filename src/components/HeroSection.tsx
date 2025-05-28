@@ -46,7 +46,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 px-6 grid md:grid-cols-2 gap-12 justify-between items-center text-center">
         <motion.div
-          className="text-white space-y-8 pe-5 ps-6 py-5 rounded-lg backdrop-brightness-60 xl:me-60 sm:me-0"
+          className="text-white space-y-8 pe-5 ps-6 py-5 rounded-lg backdrop-blur-md xl:me-60 sm:me-0"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -64,7 +64,7 @@ const HeroSection = () => {
 
             <div className="flex justify-end align-center me-12">
               <motion.span
-                className="font-light text-6xl"
+                className="font-medium text-7xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -77,7 +77,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
               >
-                _________
+                ________________
               </motion.span>
             </div>
           </div>

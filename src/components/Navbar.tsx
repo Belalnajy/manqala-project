@@ -32,31 +32,33 @@ const Navbar = () => {
             </button>
             <a
               href="#about-us"
-              className="nav-item hover:text-yellow-200 transition-colors duration-300"
+              className="nav-item hover:text-primary transition-colors duration-300"
             >
               من نحن
             </a>
             <a
               href="#patterns"
-              className="nav-item hover:text-yellow-200 transition-colors duration-300"
+              className="nav-item hover:text-primary transition-colors duration-300"
             >
               الانماط
             </a>
             <a
               href="#our-service"
-              className="nav-item hover:text-yellow-200 transition-colors duration-300"
+              className="nav-item hover:text-primary transition-colors duration-300"
             >
               خدماتنا
             </a>
             <a
               href="#"
-              className="nav-item hover:text-yellow-200 transition-colors duration-300 md:ms-5"
+              className="nav-item hover:text-primary transition-colors duration-300 md:ms-5"
             >
               الرئيسية
             </a>
           </div>
           <div className="text-white text-2xl font-bold tracking-widest">
-            <img src="/LOGO.png" alt="Logo" />
+            <a href="#">
+              <img src="/LOGO.png" alt="Logo" />
+            </a>
           </div>
           {/* <!-- Mobile Menu Button --> */}
           <div className="md:hidden">
@@ -78,25 +80,25 @@ const Navbar = () => {
           <div className="flex flex-col items-center space-y-6 py-8">
             <a
               href="#"
-              className="nav-item text-white text-xl hover:text-yellow-200 transition-colors duration-300"
+              className="nav-item text-white text-xl hover:text-primary transition-colors duration-300"
             >
               الرئيسية
             </a>
             <a
               href="#our-service"
-              className="nav-item text-white text-xl hover:text-yellow-200 transition-colors duration-300"
+              className="nav-item text-white text-xl hover:text-primary transition-colors duration-300"
             >
               خدماتنا
             </a>
             <a
               href="#patterns"
-              className="nav-item text-white text-xl hover:text-yellow-200 transition-colors duration-300"
+              className="nav-item text-white text-xl hover:text-primary transition-colors duration-300"
             >
               الانماط
             </a>
             <a
               href="#about-us"
-              className="nav-item text-white text-xl hover:text-yellow-200 transition-colors duration-300"
+              className="nav-item text-white text-xl hover:text-primary transition-colors duration-300"
             >
               من نحن
             </a>

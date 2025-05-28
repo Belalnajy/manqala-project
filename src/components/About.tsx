@@ -34,7 +34,7 @@ const About = () => {
       <div className="flex justify-center">
         <img src="/manqla-about.png" alt="" />
       </div>
-      <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 text-center xl:ms-15 sm:ms-0 mt-96">
+      <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 text-center xl:ms-15 sm:ms-0 mt-20 md:mt-96">
         {sections.map((item, i) => (
           <motion.p
             key={i}

@@ -1,4 +1,5 @@
 import './App.css';
+import './styles/fonts.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'swiper/css';
@@ -10,15 +11,12 @@ import HeroSection from './components/HeroSection';
 import About from './components/About';
 import PatternSection from './components/PatternSection';
 import Projects from './components/Projects';
-import  OurService from './components/OurService';
+import OurService from './components/OurService';
 import DiscoverSection from './components/DiscoverSection';
 import TestimonialSection from './components/TestimonialSection';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 function App() {
-
-
-
   return (
     <>
       <Navbar />
@@ -29,15 +27,11 @@ function App() {
 
       <Projects />
       <OurService />
+
       <section className="manqla-section hidden sm:hidden md:hidden lg:hidden xl:block bg-black relative h-[100vh]">
         <img src="/manqla-section/Group-1.png" alt="" />
         <img className="w-full" src="/manqla-section/Group.png" alt="" />
-        <img
-          className="absolute bottom-0 right-0"
-          src="/manqla-section/Group-2.png"
-          alt=""
-        />
-        {/* <!-- Decorative Elements --> */}
+        <img className="absolute bottom-0 right-0" src="/manqla-section/Group-2.png" alt="" />
         <div className="absolute inset-x-[35%] top-72 md:inset-x-[45%] md:top-72 w-32 h-32 border border-yellow-300  floating-animation">
           <img src="/manqla-section/floating.png" alt="" />
         </div>
@@ -51,7 +45,7 @@ function App() {
       <DiscoverSection />
       <TestimonialSection />
       <ContactUs />
-      <Footer/>
+      <Footer />
     </>
   );
 }

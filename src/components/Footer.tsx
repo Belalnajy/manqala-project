@@ -118,7 +118,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center justify-end gap-2">
-                  <p className="group-hover:text-primary transition-colors duration-300">info@manqla.com.sa</p>
+                  <p className="group-hover:text-primary transition-colors duration-300">info@manqla.com</p>
                   <div className="bg-primary/20 p-2 rounded-full group-hover:bg-primary/40 transition-colors duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
