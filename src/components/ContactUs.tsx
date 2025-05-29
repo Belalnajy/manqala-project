@@ -1,18 +1,22 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import ImageWithSEO from './ImageWithSEO';
 
 interface FormData {
   firstName: string;
   lastName: string;
   phone: string;
+  email: string;
   message: string;
 }
 
 const ContactUs = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
     phone: '',
+    email: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,9 +27,20 @@ const ContactUs = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    // Map EmailJS field names to our form data properties
+    const fieldMapping: Record<string, keyof FormData> = {
+      'firstName': 'firstName',
+      'lastName': 'lastName',
+      'phone': 'phone',
+      'email': 'email',
+      'message': 'message'
+    };
+    
+    const formField = fieldMapping[name] || name as keyof FormData;
+    
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [formField]: value
     }));
   };
 
@@ -33,7 +48,7 @@ const ContactUs = () => {
     e.preventDefault();
     
     // Validate form
-    if (!formData.firstName || !formData.lastName || !formData.phone || !formData.message) {
+    if (!formData.firstName || !formData.lastName || !formData.phone || !formData.email || !formData.message) {
       setSubmitStatus({
         success: false,
         message: 'جميع الحقول مطلوبة'
@@ -45,19 +60,17 @@ const ContactUs = () => {
     setSubmitStatus({});
 
     try {
-      // FormSubmit will handle the email delivery
-      const formElement = e.target as HTMLFormElement;
-      const formData = new FormData(formElement);
+      // Use EmailJS to send the email
+      if (!formRef.current) return;
       
-      const response = await fetch(formElement.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
+      const result = await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
       
-      if (response.ok) {
+      if (result.text === 'OK') {
         setSubmitStatus({
           success: true,
           message: 'تم إرسال رسالتك بنجاح!'
@@ -67,13 +80,13 @@ const ContactUs = () => {
           firstName: '',
           lastName: '',
           phone: '',
+          email: '',
           message: ''
         });
       } else {
-        const data = await response.json();
         setSubmitStatus({
           success: false,
-          message: data.message || 'فشل في إرسال الرسالة. يرجى المحاولة مرة أخرى.'
+          message: 'فشل في إرسال الرسالة. يرجى المحاولة مرة أخرى.'
         });
       }
     } catch (error) {
@@ -91,15 +104,14 @@ const ContactUs = () => {
     <>
       <section id="contact" className="contact-section py-25">
         <form 
+          ref={formRef}
           className="bg-[#49494980] rounded-lg min-h-[500px] w-[90%] md:w-[50%] lg:w-50%] xl:w-[30%] p-8 backdrop-blur-xs mx-auto"
-          action={`https://formsubmit.co/${import.meta.env.VITE_CONTACT_EMAIL}`} 
-          method="POST"
           onSubmit={handleSubmit}
         >
-          {/* FormSubmit configuration */}
-          <input type="hidden" name="_next" value={window.location.href} />
-          <input type="hidden" name="_subject" value="رسالة جديدة من نموذج الاتصال" />
-          <input type="hidden" name="_template" value="table" />
+          {/* EmailJS configuration - template variables */}
+          <input type="hidden" name="name" value={`${formData.firstName} ${formData.lastName}`} />
+          <input type="hidden" name="time" value={new Date().toLocaleString('ar-EG')} />
+          <input type="hidden" name="reply_to" value={formData.email} />
           <div className="flex flex-col justify-center items-center">
             <ImageWithSEO
               className="w-32"
@@ -144,6 +156,16 @@ const ContactUs = () => {
               value={formData.phone}
               onChange={handleChange}
               placeholder=" رقم الهاتف"
+            />
+          </div>
+          <div className="flex flex-row gap-4 justify-center items-center mt-4">
+            <input
+              className="bg-[#49494980] bg-opacity-50 w-full h-12 border border-[#4D4D4D] rounded-lg p-2 focus:placeholder-transparent placeholder-gray-400 placeholder:text-right text-white"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder=" البريد الإلكتروني"
             />
           </div>
           <div className="flex flex-row gap-4 justify-center items-center mt-4">

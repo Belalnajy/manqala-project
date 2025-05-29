@@ -4,8 +4,8 @@ import { useInView } from 'react-intersection-observer';
 
 const Footer = () => {
   // WhatsApp phone number - replace with your actual number
-  const whatsappNumber = '966500000000'; // Example Saudi number format
-  const whatsappMessage = 'مرحبا! أود الاستفسار عن خدماتكم'; // Pre-filled message
+  const whatsappNumber = '+966574700896'; 
+  const whatsappMessage = 'مرحبا! أود الاستفسار عن خدماتكم'; 
 
   // Generate WhatsApp URL with number and message
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -85,7 +85,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center justify-end gap-2">
-                  <p dir="ltr">+966 59 294 0715</p>
+                  <p dir="ltr">+966 57 470 0896</p>
                   <div className="bg-primary/20 p-2 rounded-full group-hover:bg-primary/40 transition-colors duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
