@@ -103,7 +103,7 @@ function App() {
         </div>
       </section>
       <DiscoverSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <ContactUs />
       <Footer />
     </>

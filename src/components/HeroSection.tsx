@@ -102,12 +102,12 @@ const HeroSection = () => {
           </motion.p>
 
           <motion.button
-            className="luxury-button text-white px-10 py-4 rounded-full text-lg font-medium hover-scale inline-flex items-center space-x-reverse space-x-3"
+            className="luxury-button text-white px-10 py-4 rounded-full text-lg font-medium hover-scale inline-flex items-center space-x-reverse space-x-3 text-end"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1 }}
           >
-            <span>اكتشف الآن</span>
+            <span className='me-5' >اكتشف الآن</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
