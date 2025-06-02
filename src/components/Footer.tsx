@@ -4,8 +4,8 @@ import { useInView } from 'react-intersection-observer';
 
 const Footer = () => {
   // WhatsApp phone number - replace with your actual number
-  const whatsappNumber = '+966574700896'; 
-  const whatsappMessage = 'مرحبا! أود الاستفسار عن خدماتكم'; 
+  const whatsappNumber = '+966574700896';
+  const whatsappMessage = 'مرحبا! أود الاستفسار عن خدماتكم';
 
   // Generate WhatsApp URL with number and message
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -48,7 +48,7 @@ const Footer = () => {
             {/* Column 1: Contact Information */}
             <div
               ref={contactRef}
-              className={`text-right transform transition-all duration-700 ${contactInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+              className={`text-right order-4 sm:order-1 transform transition-all duration-700 ${contactInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
             >
               <h3 className="text-xl font-bold text-primary mb-4 font-['Tajawal'] tracking-wide">
                 تواصل معنا
@@ -153,7 +153,7 @@ const Footer = () => {
             {/* Column 2: Services */}
             <div
               ref={servicesRef}
-              className={`text-right transform transition-all duration-700 delay-200 ${servicesInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+              className={`text-right order-2 sm:order-2 transform transition-all duration-700 delay-200 ${servicesInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
             >
               <h3 className="text-2xl font-bold text-primary mb-4 font-['Tajawal'] tracking-wide">
                 اعمال التصميم
@@ -183,7 +183,7 @@ const Footer = () => {
             {/* Column 3: Working Hours and Logo */}
             <div
               ref={hoursRef}
-              className={`text-right transform transition-all duration-700 delay-300 ${hoursInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+              className={`text-right order-3 sm:order-3 transform transition-all duration-700 delay-300 ${hoursInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
             >
               <h3 className="text-2xl font-bold text-primary mb-4 font-['Tajawal'] tracking-wide">
                 :ساعات العمل
@@ -191,14 +191,18 @@ const Footer = () => {
               <p className="mb-2 text-lg hover:text-primary transition-colors duration-300">
                 من الاحد الى الخميس
               </p>
-              <p className="mb-4 text-lg hover:text-primary transition-colors duration-300">
-                9 صباحا - 4 مساءً
+              <p
+                className="mb-4 text-lg hover:text-primary transition-colors duration-300"
+                dir="ltr"
+              >
+                ٩ صباحًا – ٩ مساءً
               </p>
             </div>
 
+            {/* Column 4: Logo and Social Icons */}
             <div
               ref={logoRef}
-              className={`flex flex-col justify-center items-end md:items-center ms-20 transform transition-all duration-700 delay-400 ${logoInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+              className={`flex flex-col order-1 sm:order-4 justify-center items-end md:items-center ms-20  transform transition-all duration-700 delay-400 ${logoInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
             >
               <div className="flex justify-end items-center">
                 <div className="text-center flex flex-col justify-center items-end md:justify-end md:items-center">

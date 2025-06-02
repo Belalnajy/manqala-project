@@ -83,6 +83,21 @@ const OurService = () => {
 
   const gardens = ['/gardens1.png', '/gardens2.png', '/gardens1.png', '/gardens2.png'];
   const outsideimages = ['/outside1.png', '/outside2.png', '/outside1.png', '/outside2.png'];
+  const insideimages = [
+    '/public/ourservice-inside/1.png',
+    '/public/ourservice-inside/2.png',
+    '/public/ourservice-inside/3.png',
+  ];
+  const furnishingimages = [
+    '/public/furnishing/1.png',
+    '/public/furnishing/2.png',
+    '/public/furnishing/3.png',
+  ];
+  const implementationimages = [
+    '/public/Implementation/1.png',
+    '/public/Implementation/2.png',
+    '/public/Implementation/3.png',
+  ];
   return (
     <>
       <section id="our-service" className="our-services">
@@ -100,7 +115,125 @@ const OurService = () => {
             </h1>
           </motion.div>
 
-          {/* القسم الرئيسي */}
+          {/* التصميم الداخلي*/}
+          <motion.section
+            className="relative text-white py-12 px-4 md:px-16"
+            ref={firstSectionRef}
+            initial="hidden"
+            animate={firstSectionInView ? 'visible' : 'hidden'}
+            variants={sectionVariants}
+          >
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+              {/* النص */}
+              <motion.div className="text-center order-1 md:order-2" variants={textVariants}>
+                <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary">
+                  {' '}
+                  التصميم الداخلي
+                </h2>
+                <br />
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed w-[45%] mx-auto ">
+                  نقوم بمراجعة المخططات المرسلة من قبل العميل او نقوم بزيارة الموقع على الطبيعة ،
+                  ونفهم توجه العميل من خلال عرض تصاميم سابقة تسهل عملية الوصول للتصميم المطلوب.
+                </p>
+              </motion.div>
+
+              {/* السلايدر */}
+              <motion.div className="order-2 md:order-1 w-full" variants={imageVariants}>
+                <Swiper
+                  modules={[Pagination, Autoplay]}
+                  pagination={{ clickable: true }}
+                  spaceBetween={35}
+                  centeredSlides={true}
+                  slidesPerView={1}
+                  autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                    reverseDirection: true,
+                  }}
+                  breakpoints={{
+                    640: { slidesPerView: 1.5 },
+                    768: { slidesPerView: 2.2 },
+                    1024: { slidesPerView: 1.5 },
+                    1280: { slidesPerView: 2 },
+                  }}
+                  className="rounded-xl "
+                >
+                  {insideimages.map((src, index) => (
+                    <SwiperSlide key={index} className="mb-20">
+                      <div className="border border-primary p-2 rounded-2xl h-[600px] md:h-[600px] lg:h-[600px] xl:[630px] relative "></div>
+                      <img
+                        src={src}
+                        alt={`inside ${index + 1}`}
+                        className="shadow-lg object-cover h-[600px] md:h-[600px] w-full rounded-2xl  absolute top-0 right-0 xl:top-4 xl:right-2 "
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </motion.div>
+            </div>
+          </motion.section>
+
+          {/*التصميم الخارجي*/}
+          <motion.section
+            className="relative text-white py-12 px-4 md:px-16"
+            ref={secondSectionRef}
+            initial="hidden"
+            animate={secondSectionInView ? 'visible' : 'hidden'}
+            variants={sectionVariants}
+          >
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+              {/* النص */}
+              <motion.div className="text-center order-1 md:order-1" variants={textVariants}>
+                <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary">
+                  {' '}
+                  التصميم الخارجي
+                </h2>
+                <br />
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed w-[45%] mx-auto ">
+                  نعمل على تصميم الواجهات السكنية والتجارية بطريقة احترافية بحيث نجعل الواجهة اكثر
+                  جمالية بأفضل جودة واقل سعر
+                </p>
+              </motion.div>
+
+              {/* السلايدر */}
+              <motion.div className="order-1 md:order-2 w-full" variants={imageVariants}>
+                <Swiper
+                  modules={[Pagination, Autoplay]}
+                  pagination={{ clickable: true }}
+                  spaceBetween={35}
+                  centeredSlides={true}
+                  slidesPerView={1}
+                  autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                    reverseDirection: true,
+                  }}
+                  breakpoints={{
+                    640: { slidesPerView: 1.5 },
+                    768: { slidesPerView: 2.2 },
+                    1024: { slidesPerView: 1.5 },
+                    1280: { slidesPerView: 2 },
+                  }}
+                  className="rounded-xl "
+                >
+                  {outsideimages.map((src, index) => (
+                    <SwiperSlide key={index} className="mb-20">
+                      <div className="border border-primary p-2 rounded-2xl h-[600px] md:h-[600px] lg:h-[600px] xl:[630px] relative "></div>
+                      <img
+                        src={src}
+                        alt={`outside ${index + 1}`}
+                        className="shadow-lg object-cover h-[600px] md:h-[600px] w-full rounded-2xl  absolute top-0 right-0 xl:top-4 xl:right-2 "
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </motion.div>
+            </div>
+          </motion.section>
+
+          {/*  تنسيق الحدائق  */}
           <motion.section
             className="relative text-white py-12 px-4 md:px-16"
             ref={firstSectionRef}
@@ -113,8 +246,12 @@ const OurService = () => {
               <motion.div className="text-center order-1 md:order-2" variants={textVariants}>
                 <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary">تنسيق حدائق</h2>
                 <br />
-                <p dir="ltr" className="text-base md:text-lg text-gray-300 leading-relaxed">
-                  نخلق مساحات خارجية تنبض بالهدوء والجمال <br /> تنسجم مع محيطها
+                <p
+                  dir="ltr"
+                  className="text-base md:text-lg text-gray-300 leading-relaxed w-[45%] mx-auto "
+                >
+                  نقوم بتحويل الفراغات الخارجية الى مناطق جلوس ومسطحات خضراء بواسطة الأخشاب المعالجة
+                  والنباتات الطبيعية والصناعية.{' '}
                 </p>
               </motion.div>
 
@@ -154,7 +291,8 @@ const OurService = () => {
               </motion.div>
             </div>
           </motion.section>
-          {/* القسم الرئيسي */}
+
+          {/*التأثيث */}
           <motion.section
             className="relative text-white py-12 px-4 md:px-16"
             ref={secondSectionRef}
@@ -165,10 +303,11 @@ const OurService = () => {
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
               {/* النص */}
               <motion.div className="text-center order-1 md:order-1" variants={textVariants}>
-                <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary"> تصميم خارجي</h2>
+                <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary"> التأثيث </h2>
                 <br />
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                  نصمّم الواجهة الخارجية لتعكس فخامة المكان <br /> وتترك انطباعاً لا يُنسى{' '}
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed w-[45%] mx-auto ">
+                  نقوم بتفصيل وتصنيع جميع أنواع الأثاث بما يتوافق مع التصميم المطلوب، مثل أطقم
+                  الكنب، وطاولات الطعام، والخزائن{' '}
                 </p>
               </motion.div>
 
@@ -194,12 +333,71 @@ const OurService = () => {
                   }}
                   className="rounded-xl "
                 >
-                  {outsideimages.map((src, index) => (
+                  {furnishingimages.map((src, index) => (
                     <SwiperSlide key={index} className="mb-20">
                       <div className="border border-primary p-2 rounded-2xl h-[600px] md:h-[600px] lg:h-[600px] xl:[630px] relative "></div>
                       <img
                         src={src}
-                        alt={`Garden ${index + 1}`}
+                        alt={`Furnishing ${index + 1}`}
+                        className="shadow-lg object-cover h-[600px] md:h-[600px] w-full rounded-2xl  absolute top-0 right-0 xl:top-4 xl:right-2 "
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </motion.div>
+            </div>
+          </motion.section>
+
+          {/*  التنفيذ  */}
+          <motion.section
+            className="relative text-white py-12 px-4 md:px-16"
+            ref={firstSectionRef}
+            initial="hidden"
+            animate={firstSectionInView ? 'visible' : 'hidden'}
+            variants={sectionVariants}
+          >
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+              {/* النص */}
+              <motion.div className="text-center order-1 md:order-2" variants={textVariants}>
+                <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary">التنفيذ</h2>
+                <br />
+                <p
+                  dir="ltr"
+                  className="text-base md:text-lg text-gray-300 leading-relaxed w-[45%] mx-auto "
+                >
+                  بعد الانتهاء من التصميم نقوم بعمل مخططات تنفيذية وعينات واعتمادها من العميل، ثم
+                  نقوم بتنفيذ الأعمال حسب المخططات وتسليم العميل على مراحل تحت اشراف هندسي.
+                </p>
+              </motion.div>
+
+              {/* السلايدر */}
+              <motion.div className="order-2 md:order-1 w-full" variants={imageVariants}>
+                <Swiper
+                  modules={[Pagination, Autoplay]}
+                  pagination={{ clickable: true }}
+                  spaceBetween={35}
+                  centeredSlides={true}
+                  slidesPerView={1}
+                  autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                    reverseDirection: true,
+                  }}
+                  breakpoints={{
+                    640: { slidesPerView: 1.5 },
+                    768: { slidesPerView: 2.2 },
+                    1024: { slidesPerView: 1.5 },
+                    1280: { slidesPerView: 2 },
+                  }}
+                  className="rounded-xl "
+                >
+                  {implementationimages.map((src, index) => (
+                    <SwiperSlide key={index} className="mb-20">
+                      <div className="border border-primary p-2 rounded-2xl h-[600px] md:h-[600px] lg:h-[600px] xl:[630px] relative "></div>
+                      <img
+                        src={src}
+                        alt={`Implementation ${index + 1}`}
                         className="shadow-lg object-cover h-[600px] md:h-[600px] w-full rounded-2xl  absolute top-0 right-0 xl:top-4 xl:right-2 "
                       />
                     </SwiperSlide>
