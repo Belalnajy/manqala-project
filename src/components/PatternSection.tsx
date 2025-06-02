@@ -97,7 +97,7 @@ const PatternSection = () => {
       <section id="patterns" className="pattern-section pb-10">
         <div>
           <h1 className="text-center text-4xl text-primary font-extrabold py-10 backdrop-grayscale-50 ">
-            انماط التصميم
+            التصاميم
             <div className="bg-primary h-[1px] w-1/12 mt-4 mx-auto"></div>
           </h1>
         </div>

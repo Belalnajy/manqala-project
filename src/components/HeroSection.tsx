@@ -61,23 +61,23 @@ const HeroSection = () => {
         >
           <div className="space-y-4">
             <motion.h1
-              className="text-6xl md:text-7xl font-bold leading-tight text-shadow text-end"
+              className="text-4xl md:text-6xl font-medium leading-tight text-shadow text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              تفاصيل
+              نجعل من كل فراغ 
               <br />
             </motion.h1>
 
             <div className="flex justify-end align-center me-12">
               <motion.span
-                className="font-medium text-7xl"
+                className="font-bold   text-4 xl md:text-6xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                أنيقة
+                ذكرى
               </motion.span>
               <motion.span
                 className="mt-5 ms-5"
@@ -85,7 +85,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
               >
-                ________________
+                _____________
               </motion.span>
             </div>
           </div>
@@ -96,9 +96,9 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
-            تصاميمنا تميز بين الأناقة والعملية لتحويل كل
+            فلسفتنا تعتمد على التميز والبساطة في
             <br />
-            مساحة إلى ملاذ شخصي يعكس ذوقك وأسلوبك.
+            التصميم لنجعل من كل فراغ ذكرى
           </motion.p>
 
           <motion.button

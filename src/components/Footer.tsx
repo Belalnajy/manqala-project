@@ -56,8 +56,7 @@ const Footer = () => {
               <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-end gap-2">
                   <p className="group-hover:text-primary transition-colors duration-300">
-                    الرياض، الملقا، برنسيس تاور
-                  </p>
+                  الرياض-الملقا-بيزنيس فالي                  </p>
                   <div className="bg-primary/20 p-2 rounded-full group-hover:bg-primary/40 transition-colors duration-300">
                     <a href="https://maps.app.goo.gl/rSKCh7L1QFq7C5hK6?g_st=com.google.maps.preview.copy">
                       <svg
@@ -212,9 +211,9 @@ const Footer = () => {
                     alt="Manqla Logo"
                   />
                   <p className="text-sm text font-['Tajawal']">
-                    منقلة - علامة تجارية . إحدى مؤسسات زاكر
+                    منقلة - علامة تجارية . إحدى مؤسسات ركائز
                   </p>
-                  <p className="text-sm font-['Tajawal']">بلدي التجارية</p>
+                  <p className="text-sm font-['Tajawal']">بلادي التجارية</p>
                 </div>
               </div>
 
