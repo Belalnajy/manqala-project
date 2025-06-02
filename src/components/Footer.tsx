@@ -211,7 +211,7 @@ const Footer = () => {
                     alt="Manqla Logo"
                   />
                   <p className="text-sm text font-['Tajawal']">
-                    منقلة - علامة تجارية . إحدى مؤسسات ركائز
+                    منقلة - علامة تجارية . إحدى مؤسسات ركائز بركة
                   </p>
                   <p className="text-sm font-['Tajawal']">بلادي التجارية</p>
                 </div>
