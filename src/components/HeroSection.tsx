@@ -61,7 +61,7 @@ const HeroSection = () => {
         >
           <div className="space-y-4">
             <motion.h1
-              className="text-4xl md:text-6xl font-medium leading-tight text-shadow text-center"
+              className="text-4xl md:text-5xl font-medium leading-tight text-shadow text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -72,7 +72,7 @@ const HeroSection = () => {
 
             <div className="flex justify-end align-center me-12">
               <motion.span
-                className="font-bold   text-4 xl md:text-6xl"
+                className="font-bold   text-4xl md:text-5xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
