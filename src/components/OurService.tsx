@@ -14,13 +14,31 @@ const OurService = () => {
     rootMargin: '-50px 0px',
   });
 
-  const [firstSectionRef, firstSectionInView] = useInView({
+  const [interiorDesignRef, interiorDesignInView] = useInView({
     triggerOnce: true,
     threshold: 0.15,
     rootMargin: '-100px 0px',
   });
 
-  const [secondSectionRef, secondSectionInView] = useInView({
+  const [exteriorDesignRef, exteriorDesignInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.15,
+    rootMargin: '-100px 0px',
+  });
+
+  const [gardensRef, gardensInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.15,
+    rootMargin: '-100px 0px',
+  });
+
+  const [furnishingRef, furnishingInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.15,
+    rootMargin: '-100px 0px',
+  });
+  
+  const [implementationRef, implementationInView] = useInView({
     triggerOnce: true,
     threshold: 0.15,
     rootMargin: '-100px 0px',
@@ -84,19 +102,19 @@ const OurService = () => {
   const gardens = ['/gardens1.png', '/gardens2.png', '/gardens1.png', '/gardens2.png'];
   const outsideimages = ['/outside1.png', '/outside2.png', '/outside1.png', '/outside2.png'];
   const insideimages = [
-    '/public/ourservice-inside/1.png',
-    '/public/ourservice-inside/2.png',
-    '/public/ourservice-inside/3.png',
+    '/ourservice-inside/1.png',
+    '/ourservice-inside/2.png',
+    '/ourservice-inside/3.png',
   ];
   const furnishingimages = [
-    '/public/furnishing/1.png',
-    '/public/furnishing/2.png',
-    '/public/furnishing/3.png',
+    '/furnishing/1.png',
+    '/furnishing/2.png',
+    '/furnishing/3.png',
   ];
   const implementationimages = [
-    '/public/Implementation/1.png',
-    '/public/Implementation/2.png',
-    '/public/Implementation/3.png',
+    '/Implementation/1.png',
+    '/Implementation/2.png',
+    '/Implementation/3.png',
   ];
   return (
     <>
@@ -118,9 +136,9 @@ const OurService = () => {
           {/* التصميم الداخلي*/}
           <motion.section
             className="relative text-white py-12 px-4 md:px-16"
-            ref={firstSectionRef}
+            ref={interiorDesignRef}
             initial="hidden"
-            animate={firstSectionInView ? 'visible' : 'hidden'}
+            animate={interiorDesignInView ? 'visible' : 'hidden'}
             variants={sectionVariants}
           >
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
@@ -177,9 +195,9 @@ const OurService = () => {
           {/*التصميم الخارجي*/}
           <motion.section
             className="relative text-white py-12 px-4 md:px-16"
-            ref={secondSectionRef}
+            ref={exteriorDesignRef}
             initial="hidden"
-            animate={secondSectionInView ? 'visible' : 'hidden'}
+            animate={exteriorDesignInView ? 'visible' : 'hidden'}
             variants={sectionVariants}
           >
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
@@ -236,9 +254,9 @@ const OurService = () => {
           {/*  تنسيق الحدائق  */}
           <motion.section
             className="relative text-white py-12 px-4 md:px-16"
-            ref={firstSectionRef}
+            ref={gardensRef}
             initial="hidden"
-            animate={firstSectionInView ? 'visible' : 'hidden'}
+            animate={gardensInView ? 'visible' : 'hidden'}
             variants={sectionVariants}
           >
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
@@ -295,9 +313,9 @@ const OurService = () => {
           {/*التأثيث */}
           <motion.section
             className="relative text-white py-12 px-4 md:px-16"
-            ref={secondSectionRef}
+            ref={furnishingRef}
             initial="hidden"
-            animate={secondSectionInView ? 'visible' : 'hidden'}
+            animate={furnishingInView ? 'visible' : 'hidden'}
             variants={sectionVariants}
           >
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
@@ -351,9 +369,9 @@ const OurService = () => {
           {/*  التنفيذ  */}
           <motion.section
             className="relative text-white py-12 px-4 md:px-16"
-            ref={firstSectionRef}
+            ref={implementationRef}
             initial="hidden"
-            animate={firstSectionInView ? 'visible' : 'hidden'}
+            animate={implementationInView ? 'visible' : 'hidden'}
             variants={sectionVariants}
           >
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">

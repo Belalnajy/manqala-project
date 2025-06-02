@@ -10,9 +10,9 @@ const patternData = [
     label: 'تجاري',
     hoverLabel: 'تصميم تجاري',
     images: [
-      '/public/Commercial-pattern/IMG_E0851.png',
-      '/public/Commercial-pattern/IMG_E0849.png',
-      '/public/Commercial-pattern/IMG_E0848.png',
+      '/Commercial-pattern/IMG_E0851.png',
+      '/Commercial-pattern/IMG_E0849.png',
+      '/Commercial-pattern/IMG_E0848.png',
     ],
   },
   {
@@ -21,11 +21,11 @@ const patternData = [
     label: 'كلاسيك',
     hoverLabel: 'تصميم كلاسيكي',
     images: [
-      '/public/Classic-pattern/1.png',
-      '/public/Classic-pattern/2.png',
-      '/public/Classic-pattern/3.png',
-      '/public/Classic-pattern/4.png',
-      '/public/Classic-pattern/5.png',
+      '/Classic-pattern/1.png',
+      '/Classic-pattern/2.png',
+      '/Classic-pattern/3.png',
+      '/Classic-pattern/4.png',
+      '/Classic-pattern/5.png',
     ],
   },
   {
@@ -34,9 +34,9 @@ const patternData = [
     label: 'مودرن',
     hoverLabel: 'تصميم مودرن',
     images: [
-      '/public/modern-pattern/1.png',
-      '/public/modern-pattern/2.png',
-      '/public/modern-pattern/3.png',
+      '/modern-pattern/1.png',
+      '/modern-pattern/2.png',
+      '/modern-pattern/3.png',
     ],
   },
   {
@@ -45,9 +45,9 @@ const patternData = [
     label: 'مودرن',
     hoverLabel: 'تصميم عصري',
     images: [
-      '/public/modern2-pattern/1.png',
-      '/public/modern2-pattern/2.png',
-      '/public/modern2-pattern/3.png',
+      '/modern2-pattern/1.png',
+      '/modern2-pattern/2.png',
+      '/modern2-pattern/3.png',
     ],
   },
   {
@@ -56,9 +56,9 @@ const patternData = [
     label: 'مكاتب',
     hoverLabel: 'تصميم مكاتب',
     images: [
-      '/public/Office-pattern/1.png',
-      '/public/Office-pattern/2.png',
-      '/public/Office-pattern/3.png',
+      '/Office-pattern/1.png',
+      '/Office-pattern/2.png',
+      '/Office-pattern/3.png',
     ],
   },
   {
@@ -67,9 +67,9 @@ const patternData = [
     label: 'نجدي',
     hoverLabel: 'تصميم نجدي',
     images: [
-      '/public/Najdi-pattern/1.png',
-      '/public/Najdi-pattern/2.png',
-      '/public/Najdi-pattern/3.png',
+      '/Najdi-pattern/1.png',
+      '/Najdi-pattern/2.png',
+      '/Najdi-pattern/3.png',
     ],
   },
 ];
