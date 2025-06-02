@@ -149,7 +149,7 @@ const OurService = () => {
                   التصميم الداخلي
                 </h2>
                 <br />
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed w-[45%] mx-auto ">
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed w-full md:w-[45%] mx-auto ">
                   نقوم بمراجعة المخططات المرسلة من قبل العميل او نقوم بزيارة الموقع على الطبيعة ،
                   ونفهم توجه العميل من خلال عرض تصاميم سابقة تسهل عملية الوصول للتصميم المطلوب.
                 </p>
@@ -208,7 +208,7 @@ const OurService = () => {
                   التصميم الخارجي
                 </h2>
                 <br />
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed w-[45%] mx-auto ">
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed w-full md:w-[45%] mx-auto ">
                   نعمل على تصميم الواجهات السكنية والتجارية بطريقة احترافية بحيث نجعل الواجهة اكثر
                   جمالية بأفضل جودة واقل سعر
                 </p>
@@ -266,7 +266,7 @@ const OurService = () => {
                 <br />
                 <p
                   dir="ltr"
-                  className="text-base md:text-lg text-gray-300 leading-relaxed w-[45%] mx-auto "
+                  className="text-base md:text-lg text-gray-300 leading-relaxed w-full md:w-[45%] mx-auto "
                 >
                   نقوم بتحويل الفراغات الخارجية الى مناطق جلوس ومسطحات خضراء بواسطة الأخشاب المعالجة
                   والنباتات الطبيعية والصناعية.{' '}
@@ -323,7 +323,7 @@ const OurService = () => {
               <motion.div className="text-center order-1 md:order-1" variants={textVariants}>
                 <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary"> التأثيث </h2>
                 <br />
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed w-[45%] mx-auto ">
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed w-full md:w-[45%] mx-auto ">
                   نقوم بتفصيل وتصنيع جميع أنواع الأثاث بما يتوافق مع التصميم المطلوب، مثل أطقم
                   الكنب، وطاولات الطعام، والخزائن{' '}
                 </p>
@@ -381,7 +381,7 @@ const OurService = () => {
                 <br />
                 <p
                   dir="ltr"
-                  className="text-base md:text-lg text-gray-300 leading-relaxed w-[45%] mx-auto "
+                  className="text-base md:text-lg text-gray-300 leading-relaxed w-full md:w-[45%] mx-auto "
                 >
                   بعد الانتهاء من التصميم نقوم بعمل مخططات تنفيذية وعينات واعتمادها من العميل، ثم
                   نقوم بتنفيذ الأعمال حسب المخططات وتسليم العميل على مراحل تحت اشراف هندسي.
