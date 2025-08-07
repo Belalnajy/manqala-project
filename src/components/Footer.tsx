@@ -327,7 +327,7 @@ const Footer = () => {
 
       {/* Floating Phone Button */}
       <a
-        href="tel:+966591537978"
+        href="tel:0591537978"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-blue-600 text-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 z-50 flex items-center justify-center animate-pulse hover:animate-none"
