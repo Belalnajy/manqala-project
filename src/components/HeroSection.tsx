@@ -52,13 +52,16 @@ const HeroSection = () => {
       ))}
       <div className="gradient-overlay absolute inset-0"></div>
 
-      <div className="relative z-10 px-6 grid md:grid-cols-2 gap-12 justify-between items-center text-center">
+      <div className="relative z-10 px-2 grid md:grid-cols-2 gap-12 justify-between items-center text-center">
         <motion.div
           className="text-white space-y-8 pe-5 ps-6 py-5 rounded-lg backdrop-blur-xs md:backdrop-blur-md  xl:me-60 sm:me-0"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
+          
+
+          
           <div className="space-y-4">
             <motion.h1
               className="text-4xl md:text-5xl font-medium leading-tight text-shadow text-center"
@@ -91,7 +94,7 @@ const HeroSection = () => {
           </div>
 
           <motion.p
-            className="text-2xl text-gray-200 max-w-lg text-end"
+            className="text-2xl text-gray-200 max-w-lg text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
@@ -99,6 +102,16 @@ const HeroSection = () => {
             فلسفتنا تعتمد على التميز والبساطة في
             <br />
             التصميم لنجعل من كل فراغ ذكرى
+            <br />
+            <br />  
+             متخصصين في تصنيع الاثاث المنزلي واعمال الديكور وتصميم
+            <br />  
+            <br />  
+            غرف نوم - السفره - المجالس - المطابخ - المكاتب
+            <br />  
+            <br />  
+          تصميم وتشطيب ديكورات المحلات والكافيهات والفنادق
+     
           </motion.p>
 
           <motion.button
@@ -117,6 +130,24 @@ const HeroSection = () => {
               ></path>
             </svg>
           </motion.button>
+          <br/>
+          <motion.a
+            href="https://wa.me/966591537978"
+            className="  border border-primary  w-56 text-primary px-10 py-4 rounded-full text-lg font-medium hover-scale inline-flex items-center space-x-reverse space-x-3 text-end"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1 }}
+          >
+            <span className='me-5' >تواصل معنا</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+          </motion.a>
         </motion.div>
       </div>
 

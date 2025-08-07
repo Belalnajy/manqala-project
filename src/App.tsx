@@ -13,13 +13,21 @@ import PatternSection from './components/PatternSection';
 import Projects from './components/Projects';
 import OurService from './components/OurService';
 import DiscoverSection from './components/DiscoverSection';
-import TestimonialSection from './components/TestimonialSection';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import SEO from './components/SEO';
 import StructuredData from './components/StructuredData';
 import BreadcrumbSEO from './components/BreadcrumbSEO';
 import FAQSEO from './components/FAQSEO';
+import TagManager from 'react-gtm-module';
+
+
+
+
+const tagManagerArgs = {
+  gtmId: 'GTM-NJ3MCC36'
+};
+TagManager.initialize(tagManagerArgs);
 function App() {
   return (
     <>
