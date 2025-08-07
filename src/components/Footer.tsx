@@ -3,6 +3,23 @@ import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useInView } from 'react-intersection-observer';
 import { Phone } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+// Add this style for the tooltip
+const tooltipStyle = {
+  position: 'absolute',
+  right: '100%',
+  top: '50%',
+  transform: 'translateY(-50%)',
+  backgroundColor: '#4CAF50',
+  color: 'white',
+  padding: '4px 8px',
+  borderRadius: '4px',
+  fontSize: '12px',
+  marginRight: '8px',
+  whiteSpace: 'nowrap',
+  zIndex: 10,
+} as React.CSSProperties;
 
 
 
@@ -50,6 +67,23 @@ const Footer = () => {
     setCopied(text);
     setTimeout(() => setCopied(''), 2000);
   };
+
+  // PhoneNumber component with copy feedback
+  const PhoneNumber = ({ number }: { number: string }) => (
+    <div className="relative">
+      <p 
+        onClick={() => copyToClipboard(number)} 
+        className="cursor-pointer select-text hover:text-yellow-400 transition-colors duration-200 relative pr-6"
+      >
+        {number}
+        {copied === number && (
+          <span style={tooltipStyle} className="animate-fade-in">
+            تم النسخ!
+          </span>
+        )}
+      </p>
+    </div>
+  );
   return (
     <>
       {/* Main Footer */}
@@ -94,10 +128,8 @@ const Footer = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-end gap-2">
-                <p onClick={() => copyToClipboard('+966 59 153 7978')} className="cursor-pointer select-text hover:text-yellow-400">
-                  +966 59 153 7978
-                </p>
+                <div className="flex items-center justify-end ">
+                <PhoneNumber number="+966 59 153 7978" />
                   <div className="bg-primary/20 p-2 rounded-full group-hover:bg-primary/40 transition-colors duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -116,10 +148,8 @@ const Footer = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-end gap-2">
-                <p onClick={() => copyToClipboard('0112113300')} className="cursor-pointer select-text hover:text-yellow-400">
-                  0112113300
-                </p>
+                <div className="flex items-center justify-end ">
+                <PhoneNumber number="0112113300" />
                     <div className="bg-primary/20 p-2 rounded-full group-hover:bg-primary/40 transition-colors duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -191,6 +221,18 @@ const Footer = () => {
                 >
                   تواصل معنا
                 </a>
+                <Link
+                  to="/privacy-policy"
+                  className="hover:text-primary hover:translate-x-[-5px] transition-all duration-300 cursor-pointer"
+                >
+                  سياسة الخصوصية
+                </Link>
+                <Link
+                  to="/terms-and-conditions"
+                  className="hover:text-primary hover:translate-x-[-5px] transition-all duration-300 cursor-pointer block mt-2"
+                >
+                  الشروط والأحكام
+                </Link>
               </div>
             </div>
 
