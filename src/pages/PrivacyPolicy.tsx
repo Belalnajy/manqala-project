@@ -7,7 +7,7 @@ import {
   PaperClipIcon,
   PhoneIcon,
   EnvelopeIcon,
-  HomeIcon
+  HomeIcon,
 } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 
@@ -23,19 +23,22 @@ const PrivacyPolicy: React.FC = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
+    transition: { duration: 0.6 },
   };
 
   const staggerChildren = {
     animate: {
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a1a1a] via-[#1a1a1a] to-[#0f0f0f] py-12 px-4 sm:px-6 lg:px-8 text-white" dir="rtl">
+    <div
+      className="min-h-screen bg-gradient-to-br from-[#1a1a1a] via-[#1a1a1a] to-[#0f0f0f] py-12 px-4 sm:px-6 lg:px-8 text-white"
+      dir="rtl"
+    >
       {/* <Helmet>
         <title>سياسة الخصوصية - منقلة</title>
         <meta name="description" content="سياسة الخصوصية لشركة منقلة - كيف نجمع ونستخدم ونحمي بياناتك الشخصية." />
@@ -43,9 +46,12 @@ const PrivacyPolicy: React.FC = () => {
       </Helmet> */}
 
       <div className="fixed inset-0 opacity-5 z-0">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d7a675' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d7a675' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
       </div>
 
       <motion.div
@@ -78,7 +84,8 @@ const PrivacyPolicy: React.FC = () => {
               <h2 className="text-2xl font-bold text-[#d7a675]">مقدمة</h2>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              نحن في شركة منقلة نحرص على خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمع واستخدام ومشاركة معلوماتك الشخصية عند زيارتك لموقعنا.
+              نحن في شركة منقلة نحرص على خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح سياسة الخصوصية
+              هذه كيفية جمع واستخدام ومشاركة معلوماتك الشخصية عند زيارتك لموقعنا.
             </p>
           </motion.section>
 
@@ -131,11 +138,11 @@ const PrivacyPolicy: React.FC = () => {
                 </div>
                 <button
                   className="text-gray-300 hover:text-[#d7a675] transition-colors cursor-pointer"
-                  onClick={() => handleCopy('+966 59 153 7978')}
+                  onClick={() => handleCopy('+966 59 591 0906')}
                   dir="ltr"
                 >
-                  +966 59 153 7978
-                  {copiedText === '+966 59 153 7978' && (
+                  +966 59 591 0906
+                  {copiedText === '+966 59 591 0906' && (
                     <span className="text-green-400 text-sm ml-2">✓ تم النسخ</span>
                   )}
                 </button>

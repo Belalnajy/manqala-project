@@ -21,7 +21,7 @@ const Navbar = () => {
           {/* <!-- Logo --> */}
 
           {/* <!-- Navigation Menu --> */}
-          <div className="hidden md:flex items-center space-x-reverse space-x-5 xl:space-x-20 text-white">
+          <div className="hidden md:flex items-center space-x-reverse space-x-3 xl:space-x-8 text-white">
             <button
               onClick={() =>
                 window.scrollTo({ top: document.getElementById('contact')?.offsetTop || 0 })
@@ -35,6 +35,18 @@ const Navbar = () => {
               className="nav-item hover:text-primary transition-colors duration-300"
             >
               من نحن
+            </a>
+            <a
+              href="#previous-projects"
+              className="nav-item hover:text-primary transition-colors duration-300"
+            >
+              مشاريعنا السابقة
+            </a>
+            <a
+              href="#gallery"
+              className="nav-item hover:text-primary transition-colors duration-300"
+            >
+              معرض الأعمال
             </a>
             <a
               href="#patterns"
@@ -81,31 +93,50 @@ const Navbar = () => {
             <a
               href="#"
               className="nav-item text-white text-xl hover:text-primary transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
             >
               الرئيسية
             </a>
             <a
               href="#our-service"
               className="nav-item text-white text-xl hover:text-primary transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
             >
               خدماتنا
             </a>
             <a
+              href="#gallery"
+              className="nav-item text-white text-xl hover:text-primary transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              معرض الأعمال
+            </a>
+            <a
+              href="#previous-projects"
+              className="nav-item text-white text-xl hover:text-primary transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              مشاريعنا السابقة
+            </a>
+            <a
               href="#patterns"
               className="nav-item text-white text-xl hover:text-primary transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
             >
               الانماط
             </a>
             <a
               href="#about-us"
               className="nav-item text-white text-xl hover:text-primary transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
             >
               من نحن
             </a>
             <button
-              onClick={() =>
-                window.scrollTo({ top: document.getElementById('contact')?.offsetTop || 0 })
-              }
+              onClick={() => {
+                window.scrollTo({ top: document.getElementById('contact')?.offsetTop || 0 });
+                setIsMenuOpen(false);
+              }}
               className="luxury-button text-white px-6 py-2 rounded-full font-medium hover-scale mt-4"
             >
               تواصل معنا

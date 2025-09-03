@@ -1,20 +1,20 @@
-// import { Helmet } from 'react-helmet-async'; 
+// import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  DocumentTextIcon, 
-  ShieldCheckIcon, 
+import {
+  DocumentTextIcon,
+  ShieldCheckIcon,
   ExclamationTriangleIcon,
   PhoneIcon,
   EnvelopeIcon,
   HomeIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
 } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 
 const TermsAndConditions: React.FC = () => {
   const [copiedText, setCopiedText] = useState<string | null>(null);
-  
+
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
     setCopiedText(text);
@@ -24,15 +24,15 @@ const TermsAndConditions: React.FC = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
+    transition: { duration: 0.6 },
   };
 
   const staggerChildren = {
     animate: {
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   return (
@@ -45,9 +45,12 @@ const TermsAndConditions: React.FC = () => {
 
       {/* Background Pattern */}
       <div className="fixed inset-0 opacity-5 z-0">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d7a675' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d7a675' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
       </div>
 
       <motion.div
@@ -84,7 +87,9 @@ const TermsAndConditions: React.FC = () => {
               <CheckCircleIcon className="h-8 w-8 text-[#d7a675] mr-3" />
             </div>
             <p className="text-gray-300 leading-relaxed text-right">
-              مرحبًا بكم في موقع منقلة، شركتكم الرائدة في مجال التصميم الداخلي والخارجي. يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام موقعنا أو خدماتنا. يعد استخدامك للموقع أو طلب خدماتنا بمثابة موافقتك الكاملة على الالتزام بهذه الشروط والأحكام.
+              مرحبًا بكم في موقع منقلة، شركتكم الرائدة في مجال التصميم الداخلي والخارجي. يرجى قراءة
+              هذه الشروط والأحكام بعناية قبل استخدام موقعنا أو خدماتنا. يعد استخدامك للموقع أو طلب
+              خدماتنا بمثابة موافقتك الكاملة على الالتزام بهذه الشروط والأحكام.
             </p>
           </motion.section>
 
@@ -100,12 +105,15 @@ const TermsAndConditions: React.FC = () => {
               <ShieldCheckIcon className="h-8 w-8 text-[#d7a675] mr-3" />
             </div>
             <p className="text-gray-300 leading-relaxed mb-4 text-right">
-              يوفر موقع منقلة معلومات شاملة عن خدماتنا في التصميم الداخلي والخارجي، الحدائق، والتنفيذ. يوافق المستخدم على استخدام الموقع بشكل قانوني ووفقًا لهذه الشروط.
+              يوفر موقع منقلة معلومات شاملة عن خدماتنا في التصميم الداخلي والخارجي، الحدائق،
+              والتنفيذ. يوافق المستخدم على استخدام الموقع بشكل قانوني ووفقًا لهذه الشروط.
             </p>
             <div className="grid md:grid-cols-3 gap-4 text-right">
               <div className="bg-gradient-to-br from-[#d7a675]/10 to-transparent p-4 rounded-lg border border-[#d7a675]/20">
                 <ExclamationTriangleIcon className="h-6 w-6 text-[#d7a675] mb-2 ml-auto" />
-                <p className="text-sm text-gray-300">لا يجوز استخدام الموقع لأغراض غير مشروعة أو محظورة</p>
+                <p className="text-sm text-gray-300">
+                  لا يجوز استخدام الموقع لأغراض غير مشروعة أو محظورة
+                </p>
               </div>
               <div className="bg-gradient-to-br from-[#d7a675]/10 to-transparent p-4 rounded-lg border border-[#d7a675]/20">
                 <ShieldCheckIcon className="h-6 w-6 text-[#d7a675] mb-2 ml-auto" />
@@ -155,11 +163,11 @@ const TermsAndConditions: React.FC = () => {
                 </div>
                 <button
                   className="text-gray-300 hover:text-[#d7a675] transition-colors cursor-pointer"
-                  onClick={() => handleCopy('+966 59 153 7978')}
+                  onClick={() => handleCopy('+966 59 591 0906')}
                   dir="ltr"
                 >
-                  +966 59 153 7978
-                  {copiedText === '+966 59 153 7978' && (
+                  +966 59 591 0906
+                  {copiedText === '+966 59 591 0906' && (
                     <span className="text-green-400 text-sm mr-2">✓ تم النسخ</span>
                   )}
                 </button>

@@ -23,6 +23,8 @@ import TagManager from 'react-gtm-module';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
+import GallerySection from './components/GallerySection';
+import PreviousProjectsSection from './components/PreviousProjectsSection';
 
 
 
@@ -123,6 +125,8 @@ function App() {
               </section>
               <DiscoverSection />
               {/* <TestimonialSection /> */}
+              <GallerySection />
+              <PreviousProjectsSection />
               <ContactUs />
               <Footer />
             </>
