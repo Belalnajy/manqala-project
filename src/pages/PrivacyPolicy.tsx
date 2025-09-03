@@ -70,7 +70,7 @@ const PrivacyPolicy: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#d7a675] mb-4 bg-gradient-to-r from-[#d7a675] to-[#b8865a] bg-clip-text text-transparent">
             سياسة الخصوصية
           </h1>
-          <p className="text-gray-300 text-lg">آخر تحديث: 7 أغسطس 2024</p>
+          <p className="text-gray-300 text-lg">آخر تحديث:3 سبتمبر 2025</p>
           <div className="mt-4 w-24 h-1 bg-gradient-to-r from-[#d7a675] to-[#b8865a] mx-auto rounded-full" />
         </motion.div>
 
@@ -99,7 +99,7 @@ const PrivacyPolicy: React.FC = () => {
             </div>
             <ul className="list-disc pr-5 space-y-2 text-gray-300">
               <li>معلومات الاتصال (الاسم، البريد الإلكتروني، رقم الهاتف) التي تقدمها لنا.</li>
-              <li>بيانات التصفح وسجل الزيارات لفهم كيفية استخدامك للموقع.</li>
+              <li>بيانات التصفح وسجل الزيارات لفهم كيفية استخدامك للموقع. </li>
               <li>أي معلومات أخرى تقدمها لنا طواعية عبر نماذج الاتصال.</li>
             </ul>
           </motion.section>
